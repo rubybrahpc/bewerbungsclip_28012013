@@ -13,9 +13,10 @@
 			  </a>
 	          <ul class="dropdown-menu">
 	          	<li><%= link_to "Video", '#' %></li>
-	          	<li><%= link_to "Konto", '#' %></li>
+	          	<li><%= link_to "Konto", current_user %></li>
+	          	<li><%= link_to "Einstellungen", edit_user_path(current_user) %></li>
 	          	<li class="divider"></li>
-	          	<li><%= link_to "Sign out", '#', method: "delete" %>
+	          	<li><%= link_to "Abmelden", signout_path, method: "delete" %>
 	          	</li>
 	          </ul>
 	        </li>
