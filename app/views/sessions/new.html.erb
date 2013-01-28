@@ -1,0 +1,36 @@
+<% provide(:title, 'Log In') %>
+<div class="banner">
+</div>
+
+<div class="row container up-and-away-signin">
+  <div class="span4 offset4 signin-box">
+    <div class="span3">
+      <h2>Login</h2></br>
+    </div>
+
+<%= form_for(:session, url: sessions_path) do |f| %>
+
+      <div class="span3">
+<% flash.each do |key, value| %>
+    <div class="alert alert-<%= key %>"><%= value %></div>
+  <% end %>
+      </div>
+
+      <div class="span3">
+        <%= f.text_field :email, placeholder: "Emailadresse" %>
+      </div>
+
+      <div class="span3">
+        <%= f.password_field :password, placeholder: "Passwort" %>
+      </div>
+
+      <div class="span3">
+        <%= f.submit "Anmelden", class: "btn btn-large btn-success btn-form" %>
+      </div>
+
+<% end %>
+      <div class="span3">
+          <p>Du hast noch kein Konto?<br> <%= link_to "Registriere dich!", signup_path %></p>
+      </div>
+  </div>
+</div>

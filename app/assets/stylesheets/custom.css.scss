@@ -209,6 +209,11 @@ DIVS & LAYOUT
 	margin-bottom: 200px;
 }
 
+.up-and-away-signin {
+	margin-top: -490px;
+	margin-bottom: 200px;
+}
+
 .up-and-away-boss {
 	margin-top: -365px;
 	margin-bottom: 200px;
@@ -219,6 +224,14 @@ DIVS & LAYOUT
 	border-radius: 6px;
 	padding: 20px 10px 10px 20px;
 	border: 1px solid #AAAAAA;
+}
+
+.signin-box {
+	background: rgba(220,220,220,0.9);
+	border-radius: 6px;
+	padding: 20px 0px 20px 40px;
+	border: 1px solid #AAAAAA;
+	text-align: center;
 }
 
 .advantage-box {
