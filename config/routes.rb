@@ -1,5 +1,9 @@
 Bewerbungsclip28012013::Application.routes.draw do
 
+  get "users/new"
+
+  match "/signup", to: 'users#new'
+
   root to: 'static_pages#home'
     
   match "/tour", to: 'static_pages#tour'
