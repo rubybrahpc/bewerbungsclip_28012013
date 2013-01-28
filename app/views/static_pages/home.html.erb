@@ -7,7 +7,14 @@
 
 <div class="row container up-and-away-boss">
   	<div class="span4 offset7 boss-box">
-      
+      <p id="bosslogin">Geben Sie hier ihren <br>Bewerbungs-Schlüssel ein</p></br>
+<%= form_for(@user) do |f| %>
+        <%= render 'layouts/error_messages' %>
+
+        <%= f.text_field :password, placeholder: "Schlüssel", autofocus: true %>
+
+        <%= f.submit "BewerbungsClip ansehen", class: "btn btn-large btn-success btn-form" %>
+<% end %>
   	</div>
 </div>
 

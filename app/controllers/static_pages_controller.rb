@@ -3,6 +3,7 @@ class StaticPagesController < ApplicationController
   end
 
   def home
+     @user = User.new # UNBEDINGT löschen/ändern dient nur für Layout/Design-Zwecke
   end
 
   def kontakt
