@@ -1,0 +1,322 @@
+@import "bootstrap";
+
+
+
+/*********************
+UNIVERSAL
+*********************/
+
+$BodyBackground: #F5F5F5;
+$grayMediumLight: #eaeaea;
+
+/*********************
+UNIVERSAL
+*********************/
+
+html {
+	height: 100%;
+	overflow-y: scroll;
+}
+
+body {
+	font-family:  'lft-etica', sans-serif;
+	font-size: 13px;
+	line-height: 18px;
+	padding-top: 40px;
+	background-color: $BodyBackground;
+}
+
+/*********************
+TYPOGRAPHY
+*********************/
+
+
+/*********************
+BANNER
+*********************/
+
+.banner {
+	background: #FFF url(buro.jpg);
+	background-position:	50% top;
+	background-repeat: no-repeat;
+	color: #FFF;
+	height: 500px;
+	overflow: hidden;
+	text-align: left;
+	margin-bottom: 30px;
+	border-radius: 0;
+	padding: 60px;
+	padding-bottom: 0px;
+	border-bottom: 2px solid #BBB;
+	h1 {
+		text-shadow: 0 1px 2px #000000;
+		font-size:	48px;
+		font-weight:	300;
+		margin-bottom: 12px;
+		letter-spacing: -1px;
+		line-height: 1;
+	}
+	h2 {
+		text-shadow: 0 1px 2px #000000;
+		font-size: 35px;
+		font-weight: 300;
+		margin-bottom: 50px;
+	}
+ 	ul li {
+		background-color: #FFFFFF;
+		background-repeat: no-repeat;
+		border-radius: 8px;
+		display: block;
+		height: 265px;
+		padding: 30px;
+		list-style: none outside none;
+		text-align: left;
+		p {
+			line-height: 1.5;
+		}
+	}
+}
+
+.banner-wissen {
+	background: #FFF url(buro.jpg);
+	background-position:	50% top;
+	background-repeat: no-repeat;
+	color: #FFF;
+	height: 365px;
+	overflow: hidden;
+	text-align: left;
+	margin-bottom: 30px;
+	border-radius: 0;
+	padding: 60px;
+	padding-bottom: 0px;
+	border-bottom: 2px solid #BBB;
+	h1 {
+		text-shadow: 0 1px 2px #000000;
+		font-size:	48px;
+		font-weight:	300;
+		margin-bottom: 12px;
+		letter-spacing: -1px;
+		line-height: 1;
+	}
+	h2 {
+		text-shadow: 0 1px 2px #000000;
+		font-size: 35px;
+		font-weight: 300;
+		margin-bottom: 50px;
+	}
+ 	ul li {
+		background-color: #FFFFFF;
+		background-repeat: no-repeat;
+		border-radius: 8px;
+		display: block;
+		height: 265px;
+		padding: 30px;
+		list-style: none outside none;
+		text-align: left;
+		p {
+			line-height: 1.5;
+		}
+	}
+}
+
+
+/*********************
+DIVS & LAYOUT
+*********************/
+
+.crossover-wissen {
+	text-align: center;
+	position: relative;
+	margin-top: -90px;
+}
+
+.box-white {
+	padding: 45px;
+	position: relative; /*ev. WEGNEHMEN, da es nur für die Wissen seite war*/
+	background-color: #FFF;
+	border: 1px solid #DADADA;
+	margin-bottom: 40px;
+	color: #333;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .075);
+	-moz-box-shadow: 0 1px 2px rgba(0, 0, 0, .075 );
+	box-shadow: 0 1px 2px rgba(0, 0, 0, .075);
+}
+
+.box-rechts {
+	margin-left: 30px;
+	h2 {
+		font-size: 20px;
+		font-weight: 300;
+		margin-bottom: 10px;
+	}	
+}
+
+.boxstyle {
+	margin-bottom: 15px;	
+	padding-top: 2px;
+	font-size: 15px;
+}
+
+.margin-top-70 {
+	margin-top: 81px;
+}
+
+.margin-top-50 {
+	margin-top: 50px;
+}
+
+.linebreak-m100 {
+	margin-top: 100px;
+}
+
+.row-marg-left-pos {
+	margin-left: 20px;
+}
+
+.book {
+	width: 150px;
+	padding-top: 60px;
+	margin-left: -28px;
+}
+
+.youtube {
+	padding-right: 10px;
+	padding-left: 50px;
+}
+
+.up-and-away {
+	margin-top: -445px;
+	margin-bottom: 200px;
+}
+
+.up-and-away-boss {
+	margin-top: -365px;
+	margin-bottom: 200px;
+}
+
+.signup-box {
+	background: rgba(220,220,220,0.9);
+	border-radius: 6px;
+	padding: 20px 10px 10px 10px;
+	border: 1px solid #AAAAAA;
+}
+
+.advantage-box {
+	background: rgba(220,220,220,0.95);
+	border-radius: 6px;
+	padding: 20px 10px 13px 10px;
+	border: 1px solid #AAAAAA;
+}
+
+.boss-box {
+	background: rgba(220,220,220,0.9);
+	border-radius: 6px;
+	padding: 25px 25px 0px 25px;
+	border: 1px solid #AAAAAA;
+}
+
+#startseite_h1 {
+	font-family: "ff-cocon-web-pro";
+	font-weight: 400;
+	font-style: italic;
+	font-size: 46px;
+	margin-top: 20px;
+	color: white;
+	text-shadow: 2px 2px 2px #000000;
+    filter: dropshadow(color=#000000, offx=2, offy=2);
+}
+
+#startseite_h2 {
+	font-family: "lft-etica";
+	font-weight: 300;
+	font-style: normal;
+	font-size: 27px;
+	margin-top: 20px;
+	color: white;
+	text-shadow: 2px 2px 2px #000000;
+    filter: dropshadow(color=#000000, offx=2, offy=2);
+}
+
+
+/*********************
+FORMS & ERROR EXPLANATION & BUTTONS
+*********************/
+
+#error_explanation {
+  color: #f00;
+  ul {
+    list-style: none;
+    margin: 0 0 18px 0;
+  }
+}
+
+#btn-login {
+	margin-top: 9px;
+}
+
+.btn-register {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+/*********************
+CHECKMARKS
+*********************/
+
+.checkmarks {
+	margin: 30px 0px;
+	list-style: none;
+	li {
+	margin-bottom: 15px;	
+	padding-left: 35px;
+	padding-top: 2px;
+	font-size: 15px;
+	background-image: url(checkmark.png);
+	background-repeat: no-repeat;
+	background-position: 0px 3px;
+	}
+}
+
+
+/*********************
+LOGOBAR
+*********************/
+
+.logobar {
+	min-width: 1100px;
+	margin: 5px 0 60px -20px;
+	a {
+		margin-right: 10px;	
+	}
+}
+
+/*********************
+FOOTER
+*********************/
+
+footer {
+  margin-top: 405px;
+  padding-top: 5px;
+  border-top: 1px solid $grayMediumLight;
+  color: $grayLight;
+  a {
+    color: $gray;
+    &:hover { 
+      color: $grayDarker;
+    }
+  }  
+  small { 
+    float: left; 
+  }
+  ul {
+    float: right;
+    list-style: none;
+    li {
+      float: left;
+      margin-left: 10px;
+    }
+  }
+}
