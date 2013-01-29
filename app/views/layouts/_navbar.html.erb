@@ -7,20 +7,23 @@
          <li><%= link_to "Tour",    tour_path %></li>
          <li><%= link_to "Preise", preise_path %></li>
          <li><%= link_to "Bewerbungstipps", wissen_path %></li>
-         <li><%= link_to "Users", users_path %></li>
+         
 <% if signed_in? %>
-			<li id="fat-menu" class="dropdown">
-			  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Konto <b class="caret"></b>
-			  </a>
-	          <ul class="dropdown-menu">
-	          	<li><%= link_to "Video", '#' %></li>
-	          	<li><%= link_to "Konto", current_user %></li>
-	          	<li><%= link_to "Einstellungen", edit_user_path(current_user) %></li>
-	          	<li class="divider"></li>
-	          	<li><%= link_to "Abmelden", signout_path, method: "delete" %>
-	          	</li>
-	          </ul>
-	        </li>
+		<li id="fat-menu" class="dropdown">
+		  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Konto <b class="caret"></b>
+		  </a>
+          <ul class="dropdown-menu">
+          	<li><%= link_to "Video", '#' %></li>
+          	<li><%= link_to "Konto", current_user %></li>
+          	<li><%= link_to "Einstellungen", edit_user_path(current_user) %></li>
+        <% if @current_user.admin == true %>
+        	<li><%= link_to "Users", users_path %></li>
+        <% end %>
+          	<li class="divider"></li>
+          	<li><%= link_to "Abmelden", signout_path, method: "delete" %>
+          	</li>
+          </ul>
+        </li>
 <% else %>
 		<%= link_to 'Registrieren', signup_path, class: "btn btn-mini btn-success", id: "btn-login"%>
 		<%= link_to 'Login', signin_path, class: "btn btn-mini", id: "btn-login"%>
