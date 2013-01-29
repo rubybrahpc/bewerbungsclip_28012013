@@ -2,12 +2,18 @@ class UsersController < ApplicationController
 
   before_filter :signed_in_user, only: [:edit, :update]
   before_filter :correct_user,   only: [:edit, :update, :show]
+
   def show
     @user = User.find(params[:id])
+    @user.name = "#{@user.vorname} #{@user.nachname}"
   end
 
   def new
     @user = User.new
+  end
+
+  def index
+    @users = User.paginate(page: params[:page])
   end
 
   def create

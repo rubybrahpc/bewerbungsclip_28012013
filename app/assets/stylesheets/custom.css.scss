@@ -57,7 +57,7 @@ BANNER
 	background-position:	20% top;
 	background-repeat: no-repeat;
 	color: #FFF;
-	height: 500px;
+	height: 540px;
 	overflow: hidden;
 	text-align: left;
 	margin-bottom: 30px;
@@ -65,33 +65,6 @@ BANNER
 	padding: 60px;
 	padding-bottom: 0px;
 	border-bottom: 2px solid #BBB;
-	h1 {
-		text-shadow: 0 1px 2px #000000;
-		font-size:	48px;
-		font-weight:	300;
-		margin-bottom: 12px;
-		letter-spacing: -1px;
-		line-height: 1;
-	}
-	h2 {
-		text-shadow: 0 1px 2px #000000;
-		font-size: 35px;
-		font-weight: 300;
-		margin-bottom: 50px;
-	}
- 	ul li {
-		background-color: #FFFFFF;
-		background-repeat: no-repeat;
-		border-radius: 8px;
-		display: block;
-		height: 265px;
-		padding: 30px;
-		list-style: none outside none;
-		text-align: left;
-		p {
-			line-height: 1.5;
-		}
-	}
 }
 
 .banner-wissen {
@@ -107,33 +80,6 @@ BANNER
 	padding: 60px;
 	padding-bottom: 0px;
 	border-bottom: 2px solid #BBB;
-	h1 {
-		text-shadow: 0 1px 2px #000000;
-		font-size:	48px;
-		font-weight:	300;
-		margin-bottom: 12px;
-		letter-spacing: -1px;
-		line-height: 1;
-	}
-	h2 {
-		text-shadow: 0 1px 2px #000000;
-		font-size: 35px;
-		font-weight: 300;
-		margin-bottom: 50px;
-	}
- 	ul li {
-		background-color: #FFFFFF;
-		background-repeat: no-repeat;
-		border-radius: 8px;
-		display: block;
-		height: 265px;
-		padding: 30px;
-		list-style: none outside none;
-		text-align: left;
-		p {
-			line-height: 1.5;
-		}
-	}
 }
 
 
@@ -369,6 +315,24 @@ footer {
     li {
       float: left;
       margin-left: 10px;
+    }
+  }
+}
+
+
+/*********************
+USERS INDEX
+*********************/
+
+.users {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-top: 1px solid $grayLighter;
+    &:last-child {
+      border-bottom: 1px solid $grayLighter;
     }
   }
 }
