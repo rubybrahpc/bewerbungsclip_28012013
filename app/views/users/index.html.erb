@@ -1,10 +1,28 @@
 <% provide(:title, 'All users') %>
-<h1>All users</h1>
 
-<%= will_paginate %>
+<div class="container">
+	<div class="row">
+		<div class="span12 center">
+			<h1>Alle User</h1>
+		</div>
+	</div>
 
-<ul class="users">
-  <%= render @users %>
-</ul>
+	<div class="row">
+		<div class="span10 offset1 center">
+			<%= will_paginate %>
+		</div>
+	</div>
 
-<%= will_paginate %>
+	<div class="row">
+		<div class="span6 offset3 userz center">
+			<%= render @users %>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="span10 offset1 center">
+			<%= will_paginate %>
+		</div>
+	</div>
+
+</div>
