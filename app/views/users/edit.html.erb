@@ -2,10 +2,33 @@
 <div class="banner">
 </div>
 
-<div class="row container up-and-away">
-  <div class="span5 offset3 signup-box">
+<div class="row container up-and-away-edit">
+
+  <div class="span5 konto-box">
     <div class="span4">
-      <h2>Bearbeite dein Konto</h2></br>
+      <% flash.each do |key, value| %>
+        <div class="alert alert-<%= key %>">
+          <%= value %>
+        </div>
+      <% end %>
+    </div>
+    <div class="span4">
+      <h2>Deine Konto</h2>
+    </div>
+    <div class="span4">
+      <h3>Name:</h3>
+      <h4><%= "#{@user.vorname} #{@user.nachname}" %></h4>
+    </div>
+    <div class="span4">
+      <h3>Emailadresse:</h3>
+      <h4><%= "#{@user.email}" %></h4>
+    </div>
+
+  </div>
+
+  <div class="span5 edit-box">
+    <div class="span5">
+      <h2>Ändere deine Daten</h2><br>
     </div>
 <%= form_for(@user) do |f| %>
       <div class="span4">
@@ -14,12 +37,12 @@
       
       <div class="span4">
         <%= f.label :email, "Emailadresse" %>
-        <%= f.text_field :email %>
+        <%= f.text_field :email, title: "Gib hier deine neue Emailadresse ein und bestätige sie mit deinem Passwort und deiner Passwort-Wiederholung." %>
       </div>
 
       <div class="span4">
         <%= f.label :password, "Passwort" %>
-        <%= f.password_field :password %>
+        <%= f.password_field :password, title: "Gib dein neues Passwort ein und bestätige es im Feld Passwort-Wiederholung." %>
       </div>
 
       <div class="span4">
