@@ -1,58 +1,62 @@
 <% provide(:title, 'Registrierung') %>
 <div class="banner">
+  <div class="container">
+
+
+    <div class="row signup-row">
+      <div class="span5 offset1 signup-box">
+        <div class="span4">
+          <h2>Registrierung</h2></br>
+        </div>
+    <%= form_for(@user) do |f| %>
+          <div class="span4">
+            <%= render 'layouts/error_messages' %>
+          </div>
+          
+          <div class="span2">
+            <%= f.text_field :vorname, placeholder: "Vorname", autofocus: true %>
+          </div>
+
+          <div class="span2">      
+            <%= f.text_field :nachname, placeholder: "Nachname" %>
+          </div>
+
+          <div class="span4">
+            <%= f.text_field :email, placeholder: "Emailadresse" %>
+          </div>
+
+          <div class="span4">
+            <%= f.password_field :password, placeholder: "Passwort" %>
+          </div>
+
+          <div class="span4">
+            <%= f.password_field :password_confirmation, placeholder: "Passwort-Wiederholung" %>
+          </div>
+
+          <div class="span2">
+            <%= f.submit "Profil erstellen", class: "btn btn-large btn-success btn-form" %>
+          </div>
+    <% end %>
+      </div>
+
+      <div class="span4 offset7 advantage-box">
+        <div class="span4">
+          <h2>Deine Vorteile</h2>
+          <ul class="checkmarks">
+            <li>keine versteckten Kosten</li>
+            <li>24 Stunden gratis testen</li>
+            <li>bis zu 5 Video-Profile</li>
+            <li>passwort geschützte Videos</li>
+            <li>einfaches hochladen des <br>Videos in dein Profil</li>
+          </ul>  
+
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
-<div class="row container up-and-away-signup">
-  <div class="span5 offset1 signup-box">
-    <div class="span4">
-      <h2>Registrierung</h2></br>
-    </div>
-<%= form_for(@user) do |f| %>
-      <div class="span4">
-        <%= render 'layouts/error_messages' %>
-      </div>
-      
-      <div class="span2">
-        <%= f.text_field :vorname, placeholder: "Vorname", autofocus: true %>
-      </div>
-
-      <div class="span2">      
-        <%= f.text_field :nachname, placeholder: "Nachname" %>
-      </div>
-
-      <div class="span4">
-        <%= f.text_field :email, placeholder: "Emailadresse" %>
-      </div>
-
-      <div class="span4">
-        <%= f.password_field :password, placeholder: "Passwort" %>
-      </div>
-
-      <div class="span4">
-        <%= f.password_field :password_confirmation, placeholder: "Passwort-Wiederholung" %>
-      </div>
-
-      <div class="span2">
-        <%= f.submit "Profil erstellen", class: "btn btn-large btn-success btn-form" %>
-      </div>
-<% end %>
-  </div>
-
-  <div class="span4 advantage-box">
-    <div class="span4">
-      <h2>Deine Vorteile</h2>
-      <ul class="checkmarks">
-        <li>keine versteckten Kosten</li>
-        <li>24 Stunden gratis testen</li>
-        <li>bis zu 5 Video-Profile</li>
-        <li>passwort geschützte Videos</li>
-        <li>einfaches uploaden des Videos</br> in dein Profil</li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-<div class="savecontent">
+<div class="savecontent-signup">
   <div class="container">
     <h2 class="preise_h5">Dein BewerbungsClip ist verschlüsselt und geschützt. Du bestimmst mit Passwort wer darauf Zugriff hat.</h2>
   </div>

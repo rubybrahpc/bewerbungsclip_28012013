@@ -1,36 +1,45 @@
 <% provide(:title, 'Preise') %>
 <div class="banner">
   <div class="container">
-    <h1 class="preise_h1">Teste BewerbungsClip</h1>
-    <h1 class="preise_h2">24 Stunden gratis!</h1>
-    <h2 class="preise_h3">Wenn du damit zufrieden bist,</h2>
-    <h2 class="preise_h4">schalte dein Konto frei!</h2>
+    
+    <div class="row">
+      <div class="span12">
+        <h1 class="preise_h0">Erfolgreich bewerben durch Persönlichkeit:</h1>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="span7">
+        <div class="span6">
+          <h1 class="preise_h1">Mit einem BewerbungsClip kommst du einfach besser an!</h1>
+        </div>
+        <div class="span7">
+          <h1 class="preise_h2">Durch Körpersprache und Auftreten <br>aus den Bewerbungsunterlagen hervorstechen!</h1>        
+        </div>
+      </div>
+
+      <div class="span3 preise-box">
+        <div class="span3">
+          <h2>€60 pro Jahr</h2>
+          <h5>entspricht €5,00 monatlich</h5>
+        </div>
+        <div class="span3">
+          <ul class="vorteile">
+            <li>keine versteckten Kosten</li>
+            <li>bis zu 5 Video-Profile</li>
+            <li>einfaches hochladen des Videos in dein Profil</li>
+          </ul>
+        </div>
+        <div class="span3">
+          <%= link_to "kostenlose Registrierung", signup_path, class: "btn btn-large btn-success btn-form" %>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
+</div>  
 
-<div class="row container up-and-away-preise">
-  <div class="span4 offset7 preise-box">
-    <div class="span3">
-      <h2>€60 pro Jahr</h2>
-      <h5>entspricht €5,00 monatlich</h5>
-    </div>
-
-    <div class="span3">
-      <ul class="vorteile">
-        <li>keine versteckten Kosten</li>
-        <li>bis zu 5 Video-Profile</li>
-        <li>einfaches uploaden des Videos in dein Profil</li>
-      </ul>
-    </div>
-    <div class="span3">
-      <%= link_to "kostenlose Registrierung", signup_path, class: "btn btn-large btn-success btn-form" %>
-    </div>
-  </div>
-</div>
-
-<div class="savecontent">
+<div class="savecontent-preise">
   <div class="container">
     <h2 class="preise_h5">Dein BewerbungsClip ist verschlüsselt und geschützt. Du bestimmst mit Passwort wer darauf Zugriff hat.</h2>
   </div>
 </div>
-

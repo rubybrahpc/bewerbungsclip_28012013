@@ -26,6 +26,7 @@ UNIVERSAL
 $BodyBackground: #F5F5F5;
 $grayborder: #bbb;
 $grayMediumLight: #eaeaea;
+$textbox: #333333;
 
 /*********************
 UNIVERSAL
@@ -61,7 +62,7 @@ BANNER
 	height: 540px;
 	overflow: hidden;
 	text-align: left;
-	margin-bottom: 30px;
+	margin-bottom: 0px;
 	border-radius: 0;
 	padding: 60px;
 	padding-bottom: 0px;
@@ -166,11 +167,6 @@ DIVS & LAYOUT
 	padding-left: 50px;
 }
 
-.up-and-away-signup {
-	margin-top: -557px;
-	margin-bottom: 120px;
-}
-
 .up-and-away-edit {
 	margin-top: -550px;
 	margin-bottom: 200px;
@@ -181,21 +177,15 @@ DIVS & LAYOUT
 	margin-bottom: 200px;
 }
 
-.up-and-away-preise {
-	margin-top: -482px;
-	margin-bottom: 9px;
-}
-
-.up-and-away-boss {
-	margin-top: -385px;
-	margin-bottom: 200px;
-}
 
 .signup-box {
+	color: $textbox;
 	background: rgba(220,220,220,0.9);
 	border-radius: 6px;
 	padding: 20px 10px 10px 20px;
 	border: 1px solid #AAAAAA;
+	z-index: 1;
+	position: absolute;
 }
 
 .edit-box {
@@ -221,15 +211,18 @@ DIVS & LAYOUT
 }
 
 .preise-box {
+	color: $textbox;
 	background: rgba(220,220,220,0.9);
 	border-radius: 6px;
-	padding: 20px 0px 20px 30px;
+	margin: 46px 0 0 35px;
+	padding: 10px 48px 5px 10px;
 	border: 1px solid #AAAAAA;
 	text-align: center;
 }
 
 .advantage-box {
-	background: rgba(220,220,220,0.95);
+	color: $textbox;
+	background: rgba(220,220,220,0.9);
 	border-radius: 6px;
 	padding: 20px 10px 23px 10px;
 	border: 1px solid #AAAAAA;
@@ -238,8 +231,12 @@ DIVS & LAYOUT
 .boss-box {
 	background: rgba(220,220,220,0.9);
 	border-radius: 6px;
-	padding: 25px 25px 0px 25px;
+	padding: 35px 25px 0px 25px;
 	border: 1px solid #AAAAAA;
+}
+
+.signup-row {
+	margin-top: 65px;
 }
 
 #startseite_h1 {
@@ -265,25 +262,36 @@ DIVS & LAYOUT
     filter: dropshadow(color=#000000, offx=2, offy=2);
 }
 
-.preise_h1 {
+.preise_h0 {
 	font-family: "calluna-sans";
 	font-weight: 700;
 	font-style: normal;
-	font-size: 55px;
-	margin-top: 10px;
+	font-size: 50px;
+	margin-top: 40px;
 	color: white;
 	text-shadow: 2px 2px 2px #000000;
     filter: dropshadow(color=#000000, offx=2, offy=2);
 }
 
+.preise_h1 {
+	font-family: "calluna-sans";
+	font-weight: 400;
+	font-style: normal;
+	font-size: 32px;
+	margin-top: 40px;
+	color: white;
+	text-shadow: 1px 2px 2px #000000;
+    filter: dropshadow(color=#000000, offx=2, offy=2);
+}
+
 .preise_h2 {
 	font-family: "calluna-sans";
-	font-weight: 700;
+	font-weight: 400;
 	font-style: normal;
-	font-size: 55px;
-	margin-top: 25px;
+	font-size: 32px;
+	margin-top: 30px;
 	color: white;
-	text-shadow: 2px 2px 2px #000000;
+	text-shadow: 1px 2px 2px #000000;
     filter: dropshadow(color=#000000, offx=2, offy=2);
 }
 
@@ -322,11 +330,20 @@ DIVS & LAYOUT
     filter: dropshadow(color=#000000, offx=2, offy=2);
 }
 
-.savecontent {
-	margin-top: 61px;
+.savecontent-signup {
+	margin-top: -2px;
 	background-color: #555;
 	padding: 0 0 0 0;
+	border-bottom: 2px solid #BBB;
 }
+
+.savecontent-preise {
+	margin-top: -2px;
+	background-color: #555;
+	padding: 0 0 0 0;
+	border-bottom: 2px solid #BBB;
+}
+
 
 .center {
 	text-align: center;
@@ -372,6 +389,7 @@ input {
 }
 
 #bosslogin {
+	color: $textbox;
 	font-size: 18px;
 	line-height: 1.5;
 }
