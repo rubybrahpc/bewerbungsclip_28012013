@@ -13,7 +13,7 @@
       <% end %>
     </div>
     <div class="span4">
-      <h2>Deine Konto</h2>
+      <h2>Dein Konto</h2>
     </div>
     <div class="span4">
       <h3>Name:</h3>
@@ -23,6 +23,10 @@
       <h3>Emailadresse:</h3>
       <h4><%= "#{@user.email}" %></h4>
     </div>
+    <div class="span3">
+        <%= link_to "Konto freischalten", '#', class: "btn btn-large btn-success btn-form" %>
+      </div>
+
 
   </div>
 
@@ -42,12 +46,12 @@
 
       <div class="span4">
         <%= f.label :password, "Passwort" %>
-        <%= f.password_field :password, title: "Gib dein neues Passwort ein und bestätige es im Feld Passwort-Wiederholung." %>
+        <%= f.password_field :password, title: "Gib dein neues Passwort ein und bestätige es im Feld Passwort-Wiederholung. Deine Emailadresse muss immer ausgefüllt sein." %>
       </div>
 
       <div class="span4">
         <%= f.label :password_confirmation, "Passwort-Wiederholung" %>
-        <%= f.password_field :password_confirmation %>
+        <%= f.password_field :password_confirmation, title: "Bitte gib dein Passwort ein zweites Mal ein. Das schützt dich vor unabsichtlichen Schreibfehlern." %>
       </div>
 
       <div class="span2">
