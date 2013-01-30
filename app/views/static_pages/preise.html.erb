@@ -1,3 +1,24 @@
 <% provide(:title, 'Preise') %>
-<h1>StaticPages#preise</h1>
-<p>Find me in app/views/static_pages/preise.html.erb</p>
+<div class="banner">
+</div>
+
+<div class="row container up-and-away-preise">
+  <div class="span4 offset3 preise-box">
+    <div class="span3">
+      <h2>€30 pro Jahr</h2>
+    </div>
+
+    <div class="span3">
+      <ul class="vorteile">
+        <li>keine versteckten Kosten</li>
+        <li>2 Tage gratis testen</li>
+        <li>bis zu 5 Video-Profile</li>
+        <li>passwort geschützter Zugriff</li>
+        <li>einfaches uploaden des Videos in dein Profil</li>
+      </ul>
+    </div>
+    <div class="span3">
+      <%= link_to "kostenlos Registrieren", signup_path, class: "btn btn-large btn-success btn-form" %>
+    </div>
+  </div>
+</div>
