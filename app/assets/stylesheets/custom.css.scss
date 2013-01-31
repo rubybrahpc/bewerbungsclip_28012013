@@ -49,6 +49,33 @@ body {
 TYPOGRAPHY
 *********************/
 
+.el1 {
+	padding-left: 30px;
+}
+
+.el2 {
+	padding-left: 40px;
+}
+
+.el3 {
+	padding-left: 40px;
+}
+
+.el4 {
+	padding-left: 40px;
+}
+
+.el5 {
+	padding-left: 90px;
+}
+
+.el6 {
+	padding-left: 10px;
+}
+
+.size {
+	font-size: 14px;
+}
 
 /*********************
 BANNER
@@ -256,7 +283,7 @@ DIVS & LAYOUT
 	color: $textbox;
 	background: rgba(220,220,220,0.9);
 	border-radius: 6px;
-	padding: 20px 10px 10px 20px;
+	padding: 20px 10px 30px 20px;
 	margin-bottom: 0px;
 	border: 1px solid #AAAAAA;
 	z-index: 1;

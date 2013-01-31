@@ -1,38 +1,48 @@
 <% provide(:title, @user.name) %>
 <div class="banner">
 	<div class="container">
+
 		<div class="row user-show-row">
 			<div class="span12 user-show-box">
-				<% flash.each do |key, value| %>
-			    <div class="alert alert-<%= key %>">
-			    	<%= value %>
-			    </div>
-			  <% end %>
+				<div class="span12">
+					<% flash.each do |key, value| %>
+				    <div class="alert alert-<%= key %>">
+				    	<%= value %>
+				    </div>
+				  <% end %>
+				</div>
 
 		<% if @user.templates.any? %>
-				<h1>Liste der Templates für <%= @user.name %></h1>
+			<div class="span12">
+				<h1>BewerbungsClips von <%= @user.name %></h1>
+			</div>
+
 				<table>
-				  <td class="like_h2">Profil</td>
-				  <td class="like_h3">für Unternehmen</td> 
-				  <td class="like_h3">erstellt am</td>
+				  <td class="el1"><h4>Profil</h4></td>
+				  <td class="el2"><h4>für Unternehmen</h4></td> 
+				  <td class="el3"><h4>Passwort</h4></td> 
+				  <td class="el4"><h4>erstellt am</h4></td>
 		<% else %>
 			<h1><%= @user.name %></h1>
 		<% end %>
 
 				<% @user.templates.each do |template| %>
 				  <tr>
-				    <td><%= template.id %></td>
-				    <td><%= template.for_company %></td>
-				    <td><%= template.updated_at.strftime("%d.%m. %Rh") %></td>
-				    <td><%= link_to 'Show', template %></td>
-				    <td><%= link_to 'Destroy', template, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+				    <td class="el1"><h4><%= template.id %></h4></td>
+				    <td class="el2"><h4><%= template.for_company %></h4></td>
+				    <td class="el3"><h4><%= ('0'..'9').to_a.shuffle.first(8).join %></h4></td>
+				    <td class="el4"><h4><%= template.created_at.strftime("%d.%m. %Rh") %></h4></td>
+				    <td class="el5"><%= link_to 'anzeigen', template, class: "btn btn-small btn-primary size" %></td>
+				    <td class="el6"><%= link_to 'löschen', template, class: "btn btn-small btn-danger size", method: :delete, data: { confirm: 'Are you sure?' } %></td>
 				  </tr>
 				<% end %>
 				</table>
 
-			<br />
+			<br/>
 
-			<%= link_to 'Neues Template erstellen', new_template_path(user_id: @user.id, vorname: @user.vorname, nachname: @user.nachname) %>
+			<div class="span6">
+			<%= link_to 'Neues Template erstellen', new_template_path(user_id: @user.id, vorname: @user.vorname, nachname: @user.nachname), class: "btn btn-small btn-warning size" %>
+			</div>
 			</div>
 		</div>
 	</div>
