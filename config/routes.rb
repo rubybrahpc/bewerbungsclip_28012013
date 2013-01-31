@@ -12,8 +12,8 @@ Bewerbungsclip28012013::Application.routes.draw do
   match "/tour", to: 'static_pages#tour'
   match "/preise", to: 'static_pages#preise'
   match "/wissen", to: 'static_pages#wissen'
-  match "/hilfe", to: 'static_pages#hilfe'
-  match "/kontakt", to: 'static_pages#kontakt'
+  match "/haftungsausschluss", to: 'static_pages#haftungsausschluss'
+  match "/impressum", to: 'static_pages#impressum'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

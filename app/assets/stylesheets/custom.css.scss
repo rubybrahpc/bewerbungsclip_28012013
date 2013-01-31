@@ -167,17 +167,6 @@ DIVS & LAYOUT
 	padding-left: 50px;
 }
 
-.up-and-away-edit {
-	margin-top: -550px;
-	margin-bottom: 200px;
-}
-
-.up-and-away-signin {
-	margin-top: -490px;
-	margin-bottom: 200px;
-}
-
-
 .signup-box {
 	color: $textbox;
 	background: rgba(220,220,220,0.9);
@@ -189,13 +178,17 @@ DIVS & LAYOUT
 }
 
 .edit-box {
+	color: $textbox;
 	background: rgba(220,220,220,0.9);
 	border-radius: 6px;
-	padding: 20px 10px 10px 20px;
+	padding: 20px 0px 10px 30px;
 	border: 1px solid #AAAAAA;
+	z-index: 1;
+	position: absolute;
 }
 
 .konto-box {
+	color: $textbox;
 	background: rgba(220,220,220,0.9);
 	border-radius: 6px;
 	padding: 20px 10px 10px 20px;
@@ -203,6 +196,7 @@ DIVS & LAYOUT
 }
 
 .signin-box {
+	color: $textbox;
 	background: rgba(220,220,220,0.9);
 	border-radius: 6px;
 	padding: 20px 0px 20px 40px;
@@ -235,8 +229,47 @@ DIVS & LAYOUT
 	border: 1px solid #AAAAAA;
 }
 
+.impressum-box {
+	color: $textbox;
+	background: rgba(220,220,220,0.9);
+	border-radius: 6px;
+	padding: 20px 10px 10px 30px;
+	margin-bottom: 0px;
+	border: 1px solid #AAAAAA;
+	z-index: 1;
+	position: absolute;
+	text-align: center;
+}
+
+.haftungs-box {
+	color: $textbox;
+	background: rgba(220,220,220,0.9);
+	border-radius: 6px;
+	padding: 20px 10px 10px 20px;
+	margin-bottom: 0px;
+	border: 1px solid #AAAAAA;
+	z-index: 1;
+	position: absolute;
+}
+
 .signup-row {
 	margin-top: 65px;
+}
+
+.signin-row {
+	margin-top: 65px;
+}
+
+.impressum-row {
+	margin-top: -10px;
+}
+
+.haftungs-row {
+	margin-top: -50px;
+}
+
+.margin-top-neg {
+	margin-top: -5px;
 }
 
 #startseite_h1 {
