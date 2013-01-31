@@ -1,0 +1,41 @@
+<%= form_for(@template) do |f| %>
+  <% if @template.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@template.errors.count, "error") %> prohibited this template from being saved:</h2>
+
+      <ul>
+      <% @template.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="span6">
+
+    <div class="field">
+      <%= f.hidden_field :user_id, value: params[:user_id] %>
+    </div>
+
+    <div class="field">
+      <%= f.hidden_field :vorname, value: params[:vorname] %>
+    </div>
+
+    <div class="field">
+      <%= f.hidden_field :nachname, value: params[:nachname] %>
+    </div>
+
+    <div class="span5 field">
+      <%= f.text_field :for_company, placeholder: "Profil für Firma", title: "Bitte dieses Feld freilassen, wenn du deinen BewerbungsClip nicht auf eine einzige Firma zuschneidest." %>
+    </div>
+
+    <div class="span5 field">
+      <%= f.file_field :video %>
+    </div>
+
+    <div class="span5 actions">
+      <%= f.submit "Template erstellen", class: "btn btn-large btn-success btn-form" %>
+    </div>
+
+  </div>
+<% end %>

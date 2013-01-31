@@ -1,5 +1,6 @@
 Bewerbungsclip28012013::Application.routes.draw do
 
+  resources :templates
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
 

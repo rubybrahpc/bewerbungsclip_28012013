@@ -1,0 +1,21 @@
+<% provide(:title, 'Template erstellen') %>
+<div class="banner">
+	<div class="container">
+		<div class="row template-create-row">
+			<div class="span7 offset3 template-create-box">
+				<div class="span7">
+					<h1>Neues Template erstellen</h1>
+				</div>
+				
+				<%= render 'form' %>
+				
+				<div class="span7">
+					<div class="span6">
+						<%= link_to 'Zurück', current_user %>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>

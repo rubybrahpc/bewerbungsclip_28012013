@@ -252,6 +252,44 @@ DIVS & LAYOUT
 	position: absolute;
 }
 
+.user-show-box {
+	color: $textbox;
+	background: rgba(220,220,220,0.9);
+	border-radius: 6px;
+	padding: 20px 10px 10px 20px;
+	margin-bottom: 0px;
+	border: 1px solid #AAAAAA;
+	z-index: 1;
+	position: absolute;
+}
+
+.template-show-box {
+	color: $textbox;
+	height: 578px;
+	background: rgba(220,220,220,0.9);
+	border-radius: 6px;
+	padding: 10px 10px 10px 20px;
+	margin-bottom: 0px;
+	border: 1px solid #AAAAAA;
+	z-index: 1;
+	position: absolute;
+}
+
+.template-create-box {
+	color: $textbox;
+	background: rgba(220,220,220,0.9);
+	border-radius: 6px;
+	padding: 20px 10px 10px 20px;
+	margin-bottom: 0px;
+	border: 1px solid #AAAAAA;
+	z-index: 1;
+	position: absolute;
+}
+
+.template-create-row {
+	margin-top: -15px;
+}
+
 .signup-row {
 	margin-top: 65px;
 }
@@ -266,6 +304,14 @@ DIVS & LAYOUT
 
 .haftungs-row {
 	margin-top: -50px;
+}
+
+.user-show-row {
+	margin-top: 15px;
+}
+
+.template-show-row {
+	margin-top: -60px;
 }
 
 .margin-top-neg {
@@ -382,6 +428,9 @@ DIVS & LAYOUT
 	text-align: center;
 }
 
+.video {
+	margin-top: -35px;
+}
 
 /*********************
 FORMS & ERROR EXPLANATION & BUTTONS

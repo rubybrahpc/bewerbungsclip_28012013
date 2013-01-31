@@ -21,7 +21,7 @@ class UsersController < ApplicationController
     @user = User.new(params[:user])
     if @user.save
       sign_in @user
-      flash[:success] = "Willkommen auf BewerbungsClip.com!"
+      flash[:success] = "Willkommen auf BewerbungsClip.com! Erstelle dein erstes Template und lade dein Video hoch."
       redirect_to @user
     else
       render 'new'

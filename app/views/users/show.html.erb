@@ -1,7 +1,39 @@
 <% provide(:title, @user.name) %>
-<% flash.each do |key, value| %>
-    <div class="alert alert-<%= key %>"><%= value %></div>
-  <% end %>
-  
-<h1><%= @user.name %></h1>
+<div class="banner">
+	<div class="container">
+		<div class="row user-show-row">
+			<div class="span12 user-show-box">
+				<% flash.each do |key, value| %>
+			    <div class="alert alert-<%= key %>">
+			    	<%= value %>
+			    </div>
+			  <% end %>
 
+		<% if @user.templates.any? %>
+				<h1>Liste der Templates für <%= @user.name %></h1>
+				<table>
+				  <td class="like_h2">Profil</td>
+				  <td class="like_h3">für Unternehmen</td> 
+				  <td class="like_h3">erstellt am</td>
+		<% else %>
+			<h1><%= @user.name %></h1>
+		<% end %>
+
+				<% @user.templates.each do |template| %>
+				  <tr>
+				    <td><%= template.id %></td>
+				    <td><%= template.for_company %></td>
+				    <td><%= template.updated_at.strftime("%d.%m. %Rh") %></td>
+				    <td><%= link_to 'Show', template %></td>
+				    <td><%= link_to 'Destroy', template, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+				  </tr>
+				<% end %>
+				</table>
+
+			<br />
+
+			<%= link_to 'Neues Template erstellen', new_template_path(user_id: @user.id, vorname: @user.vorname, nachname: @user.nachname) %>
+			</div>
+		</div>
+	</div>
+</div>

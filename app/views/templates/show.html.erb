@@ -1,0 +1,27 @@
+<div class="banner">
+	<div class="container">
+
+		<div class="row template-show-row">
+			<div class="span10 offset1 template-show-box">
+
+				<% flash.each do |key, value| %>
+			    <div class="alert alert-<%= key %>">
+			    	<%= value %>
+			    </div>
+			  <% end %>
+
+			  <h2 class="center">Mein BewerbungsClip <br>für <%= @template.for_company %></h2>
+			  <h3 class="center"><%= "#{@template.vorname} #{@template.nachname}" %></h3>
+
+
+		    <div class="video center">
+		      <%= video_tag @template.video, size: "500x450", controls: true %>
+		    </div>
+		  <% if current_user.id == @template.user_id %>
+				<%= link_to 'Zurück', current_user %>
+			<% end %>
+			</div>
+		</div>
+
+	</div>
+</div>
