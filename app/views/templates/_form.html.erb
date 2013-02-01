@@ -1,13 +1,15 @@
 <%= form_for(@template) do |f| %>
   <% if @template.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@template.errors.count, "error") %> prohibited this template from being saved:</h2>
+    <div class="span6">
+      <div id="error_explanation" class="span5">
+        <h4><%= pluralize(@template.errors.count, "error") %> prohibited this template from being saved:</h4>
 
-      <ul>
-      <% @template.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
+        <ul>
+        <% @template.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
     </div>
   <% end %>
 
@@ -33,9 +35,14 @@
       <%= f.file_field :video %>
     </div>
 
-    <div class="span5 actions">
+    <div class="span2">
       <%= f.submit "Profil erstellen", class: "btn btn-large btn-warning btn-form" %>
+    </div>
+<% end %>
+
+    <div class="span1">
+      <%= link_to 'abbrechen', templates_path, class: "btn btn-large btn-form" %>
     </div>
 
   </div>
-<% end %>
+

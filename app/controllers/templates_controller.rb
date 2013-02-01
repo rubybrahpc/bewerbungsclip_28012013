@@ -1,11 +1,14 @@
 class TemplatesController < ApplicationController
 
-  before_filter :correct_user,    only:[:show]
+  before_filter :signed_in_user,  only: [:index, :destroy]
+  before_filter :correct_user,    only: [:show, :destroy]
 
   # GET /templates
   # GET /templates.json
   def index
     @templates = Template.all
+    @user = current_user
+    @user.name = "#{@user.vorname} #{@user.nachname}"
 
     respond_to do |format|
       format.html # index.html.erb
@@ -46,7 +49,7 @@ class TemplatesController < ApplicationController
 
     respond_to do |format|
       if @template.save
-        format.html { redirect_to current_user, notice: 'Dein Profil wurde erfolgreich erstellt und ist jetzt auf der Startseite mit dem Bewerbungs-Key abrufbar.' }
+        format.html { redirect_to templates_path, notice: 'Dein Profil wurde erfolgreich erstellt und ist jetzt auf der Startseite mit dem Bewerbungs-Key abrufbar.' }
         format.json { render json: @template, status: :created, location: @template }
       else
         format.html { render action: "new" }
@@ -67,12 +70,19 @@ class TemplatesController < ApplicationController
     @template.destroy
 
     respond_to do |format|
-      format.html { redirect_to current_user }
+      format.html { redirect_to templates_path }
       format.json { head :no_content }
     end
   end
 
   private
+
+    def signed_in_user
+      unless signed_in?
+        store_location
+        redirect_to signin_url, notice: "Bitte melde dich an."
+      end
+    end
 
     def correct_user
       @template = Template.find(params[:id])

@@ -13,8 +13,8 @@
 		  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Konto <b class="caret"></b>
 		  </a>
           <ul class="dropdown-menu">
-          	<li><%= link_to "mein BewerbungsClip", current_user %></li>
-          	<li><%= link_to "Einstellungen", edit_user_path(current_user) %></li>
+          	<li><%= link_to "BewerbungsClip", templates_path %></li>
+          	<li><%= link_to "Einstellungen", current_user %></li>
             <li><%= link_to "Konto freischalten", '#' %></li>
         <% if current_user.admin == true %>
         	<li><%= link_to "Userindex", users_path %></li>

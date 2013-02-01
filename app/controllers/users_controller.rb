@@ -22,7 +22,7 @@ class UsersController < ApplicationController
     if @user.save
       sign_in @user
       flash[:success] = "Willkommen auf BewerbungsClip.com! Erstelle dein erstes Profil und lade dein Video hoch."
-      redirect_to @user
+      redirect_to templates_path
     else
       render 'new'
     end
@@ -36,7 +36,7 @@ class UsersController < ApplicationController
     if @user.update_attributes(params[:user])
       flash[:success] = "Du hast deine Daten aktualisiert!"
       sign_in @user
-      redirect_to edit_user_path(current_user)
+      redirect_to user_path(current_user)
     else
       render 'edit'
     end
