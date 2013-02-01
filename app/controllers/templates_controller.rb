@@ -1,4 +1,7 @@
 class TemplatesController < ApplicationController
+
+  before_filter :correct_user,    only:[:show]
+
   # GET /templates
   # GET /templates.json
   def index
@@ -43,7 +46,7 @@ class TemplatesController < ApplicationController
 
     respond_to do |format|
       if @template.save
-        format.html { redirect_to current_user, notice: 'Dein Profiil wurde erfolgreich erstellt und kann jetzt auch auf der Startseite mit deinem Kennwort (Nummer siehe unten) angesehen werden.' }
+        format.html { redirect_to current_user, notice: 'Dein Profil wurde erfolgreich erstellt und ist jetzt auf der Startseite mit dem Bewerbungs-Key abrufbar.' }
         format.json { render json: @template, status: :created, location: @template }
       else
         format.html { render action: "new" }
@@ -68,4 +71,12 @@ class TemplatesController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  private
+
+    def correct_user
+      @template = Template.find(params[:id])
+      redirect_to(root_path) unless current_user.id == @template.user_id
+    end
+
 end
