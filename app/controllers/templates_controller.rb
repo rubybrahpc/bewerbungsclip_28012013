@@ -43,7 +43,7 @@ class TemplatesController < ApplicationController
 
     respond_to do |format|
       if @template.save
-        format.html { redirect_to @template, notice: 'Dein Template wurde erfolgreich erstellt.' }
+        format.html { redirect_to current_user, notice: 'Dein Profiil wurde erfolgreich erstellt und kann jetzt auch auf der Startseite mit deinem Kennwort (Nummer siehe unten) angesehen werden.' }
         format.json { render json: @template, status: :created, location: @template }
       else
         format.html { render action: "new" }
@@ -64,7 +64,7 @@ class TemplatesController < ApplicationController
     @template.destroy
 
     respond_to do |format|
-      format.html { redirect_to @user }
+      format.html { redirect_to current_user }
       format.json { head :no_content }
     end
   end

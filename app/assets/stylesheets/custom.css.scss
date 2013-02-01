@@ -77,6 +77,10 @@ TYPOGRAPHY
 	font-size: 14px;
 }
 
+.showtemplate-style {
+	line-height: 1.3;
+}
+
 /*********************
 BANNER
 *********************/
@@ -109,6 +113,19 @@ BANNER
 	padding: 60px;
 	padding-bottom: 0px;
 	border-bottom: 2px solid #BBB;
+}
+
+.banner-profil {
+	background: $BodyBackground url(buro.jpg);
+	background-position:	20% top;
+	background-repeat: no-repeat;
+	color: #FFF;
+	overflow: hidden;
+	text-align: left;
+	margin-bottom: 0px;
+	border-radius: 0;
+	padding: 60px;
+	padding-bottom: 0px;
 }
 
 
@@ -169,6 +186,10 @@ DIVS & LAYOUT
 
 .margin-top-70 {
 	margin-top: 81px;
+}
+
+.margin-top-35 {
+	margin-top: 35px;
 }
 
 .margin-top-50 {
@@ -286,8 +307,6 @@ DIVS & LAYOUT
 	padding: 20px 10px 30px 20px;
 	margin-bottom: 0px;
 	border: 1px solid #AAAAAA;
-	z-index: 1;
-	position: absolute;
 }
 
 .template-show-box {
@@ -326,7 +345,7 @@ DIVS & LAYOUT
 }
 
 .impressum-row {
-	margin-top: -10px;
+	margin-top: -40px;
 }
 
 .haftungs-row {
@@ -456,7 +475,7 @@ DIVS & LAYOUT
 }
 
 .video {
-	margin-top: -35px;
+	margin-top: -25px;
 }
 
 /*********************
@@ -501,6 +520,10 @@ input {
 	color: $textbox;
 	font-size: 18px;
 	line-height: 1.5;
+}
+
+.button-down {
+	margin-top: 540px;
 }
 
 /*********************
