@@ -14,10 +14,15 @@
 #
 
 class Template < ActiveRecord::Base
-  attr_accessible :for_company, :user_id, :video, :vorname, :nachname
+  attr_accessible :for_company, :user_id, :video, :vorname, :nachname, :password, :password_confirmation
+
+  has_secure_password
 
   validates :for_company, length: { maximum: 43 }
   validates :video, presence: true
+
+  validates :password, presence: true, length: { minimum: 9 }
+  validates :password_confirmation, presence: true
 
   belongs_to :user
 
