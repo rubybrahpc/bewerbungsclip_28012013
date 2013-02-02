@@ -3,14 +3,16 @@ Bewerbungsclip28012013::Application.routes.draw do
   resources :templates
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
+  resources :bessions, only: [:new, :create, :destroy]
 
   match '/signuptemplate',  to: 'templates#new'
+  match '/signouttemplate', to: 'bessions#destroy', via: :delete
 
   match '/signup',  to: 'users#new'
   match '/signin',  to: 'sessions#new'
   match '/signout', to: 'sessions#destroy', via: :delete
 
-  root to: 'static_pages#home'
+  root to: 'bessions#new'
     
   match "/tour", to: 'static_pages#tour'
   match "/preise", to: 'static_pages#preise'

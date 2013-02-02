@@ -1,5 +1,5 @@
 <%= form_for(@template) do |f| %>
-  <% key = ('0'..'9').to_a.shuffle.first(10).join %>
+  <% key1 = ('0'..'9').to_a.shuffle.first(10).join %>
   <% if @template.errors.any? %>
     <div class="span6">
       <div id="error_explanation" class="span5">
@@ -29,11 +29,15 @@
     </div>
 
     <div class="field">
-      <%= f.hidden_field :password, value: key %>
+      <%= f.hidden_field :password, value: key1 %>
     </div>
 
     <div class="field">
-      <%= f.hidden_field :password_confirmation, value: key %>
+      <%= f.hidden_field :password_confirmation, value: key1 %>
+    </div>
+
+    <div class="field">
+      <%= f.hidden_field :bosskey, value: key1 %>
     </div>
 
     <div class="span5 field margin-top-35">

@@ -30,7 +30,7 @@
           <tr>
             <td class="el1"><h4><%= template.for_company %>
               <% if template.for_company.empty? %>Allgemeines Profil<% end %></h4></td>
-            <td class="el3"><h4><%= ('0'..'9').to_a.shuffle.first(8).join %></h4></td>
+            <td class="el3"><h4><%= template.bosskey %></h4></td>
             <td class="el4"><h4><%= template.created_at.strftime("%d.%m. %Rh") %></h4></td>
             <td class="el5"><%= link_to 'anzeigen', template, class: "btn btn-small btn-primary size" %></td>
             <td class="el6"><%= link_to 'löschen', template, class: "btn btn-small btn-danger size", method: :delete, data: { confirm: 'Willst du das Profil wirklich unwiderruflich löschen?' } %></td>

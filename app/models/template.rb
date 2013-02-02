@@ -2,21 +2,32 @@
 #
 # Table name: templates
 #
-#  id          :integer          not null, primary key
-#  user_id     :integer
-#  from_user   :string(255)
-#  for_company :string(255)
-#  video       :string(255)
-#  created_at  :datetime         not null
-#  updated_at  :datetime         not null
-#  vorname     :string(255)
-#  nachname    :string(255)
+#  id              :integer          not null, primary key
+#  user_id         :integer
+#  from_user       :string(255)
+#  for_company     :string(255)
+#  video           :string(255)
+#  created_at      :datetime         not null
+#  updated_at      :datetime         not null
+#  vorname         :string(255)
+#  nachname        :string(255)
+#  password_digest :string(255)
+#  bosskey         :string(255)
 #
 
 class Template < ActiveRecord::Base
-  attr_accessible :for_company, :user_id, :video, :vorname, :nachname, :password, :password_confirmation
+  attr_accessible 	:for_company, 
+  					:user_id, 
+  					:video, 
+  					:vorname, 
+  					:nachname, 
+  					:password, 
+  					:password_confirmation, 
+  					:bosskey
 
   has_secure_password
+
+  before_save :create_remember_token
 
   validates :for_company, length: { maximum: 43 }
   validates :video, presence: true
@@ -27,4 +38,10 @@ class Template < ActiveRecord::Base
   belongs_to :user
 
   mount_uploader :video, VideoUploader
+
+  private
+
+    def create_remember_token
+      self.remember_token = SecureRandom.urlsafe_base64
+    end
 end
