@@ -23,7 +23,8 @@ class Template < ActiveRecord::Base
   					:nachname, 
   					:password, 
   					:password_confirmation, 
-  					:bosskey
+  					:bosskey,
+  					:fingerprint
 
   has_secure_password
 

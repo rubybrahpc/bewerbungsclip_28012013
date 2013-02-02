@@ -1,7 +1,7 @@
 class TemplatesController < ApplicationController
 
-  # before_filter :signed_in_user,  only: [:index, :destroy]
-  # before_filter :correct_user,    only: [:show, :destroy]
+  before_filter :signed_in_user,  only: [:index, :destroy]
+  before_filter :correct_user,    only: [:show, :destroy]
 
   # GET /templates
   # GET /templates.json
@@ -86,7 +86,8 @@ class TemplatesController < ApplicationController
 
     def correct_user
       @template = Template.find(params[:id])
-      redirect_to(root_path) unless current_user.id == @template.user_id
+      user = User.find(params[:id])
+      redirect_to(root_path) unless user.fingerprint == @template.fingerprint || template.fingerprint == @template.fingerprint
     end
 
 end

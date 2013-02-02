@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130202150506) do
+ActiveRecord::Schema.define(:version => 20130202162502) do
 
   create_table "templates", :force => true do |t|
     t.integer  "user_id"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(:version => 20130202150506) do
     t.string   "password_digest"
     t.string   "bosskey"
     t.string   "remember_token"
+    t.string   "fingerprint"
   end
 
   add_index "templates", ["remember_token"], :name => "index_templates_on_remember_token"
@@ -39,6 +40,7 @@ ActiveRecord::Schema.define(:version => 20130202150506) do
     t.string   "password_digest"
     t.string   "remember_token"
     t.boolean  "admin",           :default => false
+    t.string   "fingerprint"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

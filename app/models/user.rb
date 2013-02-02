@@ -15,7 +15,7 @@
 #
 
 class User < ActiveRecord::Base
-  attr_accessible :vorname, :nachname, :name, :email, :password, :password_confirmation
+  attr_accessible :vorname, :nachname, :name, :email, :password, :password_confirmation, :fingerprint
   has_secure_password
 
   has_many :templates

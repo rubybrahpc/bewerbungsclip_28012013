@@ -9,8 +9,14 @@
           <h2>Registrierung</h2></br>
         </div>
     <%= form_for(@user) do |f| %>
+          <% fingerprint = ('0'..'9').to_a.shuffle.first(12).join %>
+    
           <div class="span4">
             <%= render 'layouts/error_messages' %>
+          </div>
+
+          <div class="field">
+            <%= f.hidden_field :fingerprint, value: fingerprint %>
           </div>
           
           <div class="span2">
