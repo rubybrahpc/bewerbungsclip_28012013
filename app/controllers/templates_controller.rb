@@ -1,7 +1,7 @@
 class TemplatesController < ApplicationController
 
   before_filter :signed_in_user,  only: [:index, :destroy]
-  before_filter :correct_user,    only: [:show, :destroy]
+  # before_filter :correct_user,    only: [:show, :destroy]
 
   # GET /templates
   # GET /templates.json
