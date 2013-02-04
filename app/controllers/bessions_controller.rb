@@ -5,7 +5,7 @@ class BessionsController < ApplicationController
 
   def create
     template = Template.find_by_bosskey(params[:bession][:bosskey])
-    if template && template.authenticate(params[:bession][:password])
+    if template
       sign_in template
       redirect_back_or template
     else

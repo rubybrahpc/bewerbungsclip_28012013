@@ -1,29 +1,44 @@
-<div class="banner">
-	<div class="container">
+<% if signed_in? %>
+  <div class="banner">
+    <div class="container">
+    
+      <div class="row sessions-end-row">
+        <div class="span4 offset4 sessions-end-box center">
+          <p id="bosslogin">Bitte <%= link_to "melde dich ab", signout_path, method: "delete" %> um den BewerbungsKey einzugeben.</p>
+            <%= link_to "Abmelden", signout_path, method: "delete", class: "btn btn-large btn-success btn-form" %>
+        </div>
+      </div>
 
-    <div class="row">
-      <h1 id="startseite_h1">Darf ich mich vorstellen?!</h1>
-      <h2 id="startseite_h2">Mein persönlicher BewerbungsClip:</h2>
     </div>
-	
-    <div class="row ">
-      	<div class="span4 offset7 boss-box">
-          <p id="bosslogin">Geben Sie hier Ihren <br>Bewerbungs-Schlüssel ein</p></br>
-		    <%= form_for(:bession, url: bessions_path) do |f| %>
-          <% flash.each do |key, value| %>
-              <div class="alert alert-<%= key %>">
-                <%= value %>
-              </div>
-            <% end %>
-
-		      <%= f.text_field :bosskey, placeholder: "Key", autofocus: true %>
-
-		      <%= f.text_field :password, placeholder: "Key" %>
-
-		      <%= f.submit "Sign in", class: "btn btn-large btn-primary" %>
-		    <% end %>
-      	</div>
-    </div>
-
   </div>
-</div>
+
+<% else %>
+  <div class="banner">
+    <div class="container">
+
+      <div class="row">
+        <h1 id="startseite_h1">Darf ich mich vorstellen?!</h1>
+        <h2 id="startseite_h2">Mein persönlicher BewerbungsClip:</h2>
+      </div>
+    
+      <div class="row ">
+          <div class="span4 offset7 boss-box">
+            <p id="bosslogin">Geben Sie hier Ihren <br>BewerbungsKey ein</p></br>
+          <%= form_for(:bession, url: bessions_path) do |f| %>
+            <% flash.each do |key, value| %>
+                <div class="alert alert-<%= key %>">
+                  <%= value %>
+                </div>
+              <% end %>
+
+            <%= f.text_field :bosskey, placeholder: "BewerbungsKey", autofocus: true %>
+
+            <%= f.submit "BewerbungsClip ansehen", class: "btn btn-large btn-success btn-form" %>
+          <% end %>
+          </div>
+      </div>
+
+    </div>
+  </div>
+
+<% end %>

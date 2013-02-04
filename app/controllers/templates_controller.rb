@@ -49,7 +49,7 @@ class TemplatesController < ApplicationController
 
     respond_to do |format|
       if @template.save
-        format.html { redirect_to templates_path, notice: 'Dein Profil wurde erfolgreich erstellt und ist jetzt auf der Startseite mit dem Bewerbungs-Key abrufbar.' }
+        format.html { redirect_to templates_path, notice: 'Dein Profil wurde erfolgreich erstellt und ist jetzt auf der Startseite mit dem BewerbungsKey abrufbar.' }
         format.json { render json: @template, status: :created, location: @template }
       else
         format.html { render action: "new" }

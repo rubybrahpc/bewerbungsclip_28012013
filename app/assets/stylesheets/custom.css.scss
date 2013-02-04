@@ -54,11 +54,11 @@ TYPOGRAPHY
 }
 
 .el2 {
-	padding-left: 40px;
+	padding-left: 30px;
 }
 
 .el3 {
-	padding-left: 40px;
+	padding-left: 30px;
 }
 
 .el4 {
@@ -66,10 +66,6 @@ TYPOGRAPHY
 }
 
 .el5 {
-	padding-left: 90px;
-}
-
-.el6 {
 	padding-left: 10px;
 }
 
@@ -278,6 +274,13 @@ DIVS & LAYOUT
 	border: 1px solid #AAAAAA;
 }
 
+.sessions-end-box {
+	background: rgba(220,220,220,0.9);
+	border-radius: 6px;
+	padding: 35px 25px 0px 25px;
+	border: 1px solid #AAAAAA;
+}
+
 .impressum-box {
 	color: $textbox;
 	background: rgba(220,220,220,0.9);
@@ -343,6 +346,10 @@ DIVS & LAYOUT
 
 .signin-row {
 	margin-top: 65px;
+}
+
+.sessions-end-row {
+	margin-top: 150px;
 }
 
 .impressum-row {

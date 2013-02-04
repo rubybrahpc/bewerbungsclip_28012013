@@ -15,25 +15,27 @@
 
     <% if @user.templates.any? %>
       <div class="span12">
-        <h1>Profile von <%= @user.name %></h1><br>
+        <h1>meine Profile</h1><br>
       </div>
 
         <table>
-          <td class="el1"><h4>BewerbungsClip für Unternehmen</h4></td>
-          <td class="el3"><h4>Bewerbungs-Key</h4></td> 
-          <td class="el4"><h4>erstellt am</h4></td>
+          <td class="el1"><h4>BewerbungsClip für</h4></td>
+          <td class="el2"><h4>BewerbungsKey</h4></td> 
+          <td class="el3"><h4>erstellt am</h4></td>
     <% else %>
-      <h1><%= @user.name %></h1>
+      <div class="span12">
+        <h1><%= @user.name %></h1>
+      </div>
     <% end %>
 
         <% @user.templates.each do |template| %>
           <tr>
             <td class="el1"><h4><%= template.for_company %>
               <% if template.for_company.empty? %>Allgemeines Profil<% end %></h4></td>
-            <td class="el3"><h4><%= template.bosskey %></h4></td>
-            <td class="el4"><h4><%= template.created_at.strftime("%d.%m. %Rh") %></h4></td>
-            <td class="el5"><%= link_to 'anzeigen', template, class: "btn btn-small btn-primary size" %></td>
-            <td class="el6"><%= link_to 'löschen', template, class: "btn btn-small btn-danger size", method: :delete, data: { confirm: 'Willst du das Profil wirklich unwiderruflich löschen?' } %></td>
+            <td class="el2"><h4><%= template.bosskey %></h4></td>
+            <td class="el3"><h4><%= template.created_at.strftime("%d.%m. %Rh") %></h4></td>
+            <td class="el4"><%= link_to 'anzeigen', template, class: "btn btn-small btn-primary size" %></td>
+            <td class="el5"><%= link_to 'löschen', template, class: "btn btn-small btn-danger size", method: :delete, data: { confirm: 'Willst du das Profil wirklich unwiderruflich löschen?' } %></td>
           </tr>
         <% end %>
         </table><br>
