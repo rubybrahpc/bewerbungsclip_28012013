@@ -10,6 +10,11 @@
       	<div class="span4 offset7 boss-box">
           <p id="bosslogin">Geben Sie hier Ihren <br>Bewerbungs-Schlüssel ein</p></br>
 		    <%= form_for(:bession, url: bessions_path) do |f| %>
+          <% flash.each do |key, value| %>
+              <div class="alert alert-<%= key %>">
+                <%= value %>
+              </div>
+            <% end %>
 
 		      <%= f.text_field :bosskey, placeholder: "Key", autofocus: true %>
 
