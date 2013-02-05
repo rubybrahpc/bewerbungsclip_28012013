@@ -31,10 +31,16 @@ class Template < ActiveRecord::Base
 
   before_save :create_remember_token
 
+
+  validates :vorname, presence: true, length: { maximum: 25 }
+  validates :nachname, presence: true, length: { maximum: 25 }
+
+  validates :bosskey, presence: true, uniqueness: true
+
   validates :for_company, length: { maximum: 45 }
   validates :video, presence: true
 
-  validates :password, presence: true, length: { minimum: 9 }
+  validates :password, presence: true, length: { minimum: 10 }
   validates :password_confirmation, presence: true
 
   belongs_to :user
