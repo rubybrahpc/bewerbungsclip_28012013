@@ -58,14 +58,18 @@ TYPOGRAPHY
 }
 
 .el3 {
-	padding-left: 30px;
+	padding-left: 50px;
 }
 
 .el4 {
-	padding-left: 40px;
+	padding-left: 30px;
 }
 
 .el5 {
+	padding-left: 40px;
+}
+
+.el6 {
 	padding-left: 10px;
 }
 
@@ -74,6 +78,8 @@ TYPOGRAPHY
 }
 
 .showtemplate-style {
+	margin-top: 30px;
+	margin-bottom: 10px;
 	line-height: 1.3;
 }
 
@@ -181,8 +187,8 @@ DIVS & LAYOUT
 	font-size: 15px;
 }
 
-.margin-top-70 {
-	margin-top: 81px;
+.margin-top-15 {
+	margin-top: 15px;
 }
 
 .margin-top-35 {
@@ -191,6 +197,14 @@ DIVS & LAYOUT
 
 .margin-top-50 {
 	margin-top: 50px;
+}
+
+.margin-top-70 {
+	margin-top: 81px;
+}
+
+.special {
+	margin: 6px -50px 3px 10px;
 }
 
 .linebreak-m100 {
@@ -488,6 +502,10 @@ DIVS & LAYOUT
 
 .video {
 	margin-top: -25px;
+}
+
+.pull-left {
+	margin-left: -20px;
 }
 
 /*********************

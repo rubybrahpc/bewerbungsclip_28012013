@@ -3,8 +3,8 @@
     <div class="container">
     
       <div class="row sessions-end-row">
-        <div class="span4 offset4 sessions-end-box center">
-          <p id="bosslogin">Bitte <%= link_to "melde dich ab", signout_path, method: "delete" %> um den BewerbungsKey einzugeben.</p>
+        <div class="span3 offset4 sessions-end-box center">
+          <p id="bosslogin">Bitte <%= link_to "melde dich ab", signout_path, method: "delete" %> um deinen BewerbungsClip mit dem Kennwort anzusehen.</p>
             <%= link_to "Abmelden", signout_path, method: "delete", class: "btn btn-large btn-success btn-form" %>
         </div>
       </div>
@@ -23,7 +23,7 @@
     
       <div class="row ">
           <div class="span4 offset7 boss-box">
-            <p id="bosslogin">Geben Sie hier Ihren <br>BewerbungsKey ein</p></br>
+            <p id="bosslogin">Geben Sie hier Ihr <br>Kennwort ein</p></br>
           <%= form_for(:bession, url: bessions_path) do |f| %>
             <% flash.each do |key, value| %>
                 <div class="alert alert-<%= key %>">
@@ -31,7 +31,7 @@
                 </div>
               <% end %>
 
-            <%= f.text_field :bosskey, placeholder: "BewerbungsKey", autofocus: true %>
+            <%= f.text_field :bosskey, placeholder: "Kennwort", autofocus: true %>
 
             <%= f.submit "BewerbungsClip ansehen", class: "btn btn-large btn-success btn-form" %>
           <% end %>

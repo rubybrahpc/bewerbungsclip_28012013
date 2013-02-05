@@ -15,30 +15,43 @@
 
     <% if @user.templates.any? %>
       <div class="span12">
-        <h1>meine Profile</h1><br>
+        <h2>Übersicht</h2><br>
       </div>
 
-        <table>
-          <td class="el1"><h4>BewerbungsClip für</h4></td>
-          <td class="el2"><h4>BewerbungsKey</h4></td> 
-          <td class="el3"><h4>erstellt am</h4></td>
+      <div class="span6">
+        <h4>BewerbungsClip für</h4>
+      </div>
+      <div class="span2">
+        <h4>Kennwort</h4>
+      </div>
+      <div class="span3 pull-left">
+        <h4>zuletzt besucht</h4>
+      </div>
+
     <% else %>
       <div class="span12">
-        <h1><%= @user.name %></h1>
+        <h2>Erstelle dein erstes Profil hier:</h2>
       </div>
     <% end %>
 
         <% @user.templates.each do |template| %>
-          <tr>
-            <td class="el1"><h4><%= template.for_company %>
-              <% if template.for_company.empty? %>Allgemeines Profil<% end %></h4></td>
-            <td class="el2"><h4><%= template.bosskey %></h4></td>
-            <td class="el3"><h4><%= template.created_at.strftime("%d.%m. %Rh") %></h4></td>
-            <td class="el4"><%= link_to 'anzeigen', template, class: "btn btn-small btn-primary size" %></td>
-            <td class="el5"><%= link_to 'löschen', template, class: "btn btn-small btn-danger size", method: :delete, data: { confirm: 'Willst du das Profil wirklich unwiderruflich löschen?' } %></td>
-          </tr>
-        <% end %>
-        </table><br>
+
+          <div class="span6">
+            <h5><%= template.for_company %>
+              <% if template.for_company.empty? %>Allgemeines Profil<% end %></h5>
+          </div>
+          <div class="span2">
+            <h5><%= template.bosskey %></h5>
+          </div>
+          <div class="span2 pull-left">
+            <h5><%= template.created_at.strftime("%d.%m. %Rh") %></h5>
+          </div>
+          <div class="span3 special">
+            <%= link_to 'anzeigen', template, class: "btn btn-small btn-primary size" %>
+            <%= link_to 'löschen', template, class: "btn btn-small btn-danger size", method: :delete, data: { confirm: 'Willst du das Profil wirklich unwiderruflich löschen?' } %>
+          </div>
+          
+        <% end %><br>
 
       <div class="span6">
       <%= link_to 'neues Profil erstellen', new_template_path(user_id: @user.id, vorname: @user.vorname, nachname: @user.nachname, fingerprint: @user.fingerprint), class: "btn btn-large btn-warning btn-form" %>

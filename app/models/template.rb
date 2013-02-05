@@ -17,7 +17,8 @@
 
 class Template < ActiveRecord::Base
   attr_accessible 	:for_company, 
-  					:user_id, 
+  					:user_id,
+            :from_user, 
   					:video, 
   					:vorname, 
   					:nachname, 
@@ -30,7 +31,7 @@ class Template < ActiveRecord::Base
 
   before_save :create_remember_token
 
-  validates :for_company, length: { maximum: 43 }
+  validates :for_company, length: { maximum: 55 }
   validates :video, presence: true
 
   validates :password, presence: true, length: { minimum: 9 }

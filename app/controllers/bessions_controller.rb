@@ -9,7 +9,7 @@ class BessionsController < ApplicationController
       sign_in template
       redirect_back_or template
     else
-      flash.now[:error] = 'Dieser Bewerbungs-Key ist nicht vergeben. Bitte kontrollieren Sie die Eingabe.'
+      flash.now[:error] = 'Dieses Kennwort ist nicht vergeben. Bitte kontrollieren Sie die Eingabe.'
       render 'new'
     end
   end

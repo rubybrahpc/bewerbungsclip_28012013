@@ -44,11 +44,12 @@
       <%= f.hidden_field :bosskey, value: key1 %>
     </div>
 
-    <div class="span5 field margin-top-35">
-      <%= f.text_field :for_company, placeholder: "Profil für Firma", title: "Bitte dieses Feld freilassen, wenn du einen BewerbungsClip für mehrere Unternehmen machst." %>
+    <div class="span5 field margin-top-15 ">
+      <%= f.label :for_company, "Name", title: "Gib deinem BewerbungsClip einen Namen, damit du dich auch später noch gut auskennst. Nur du kannst diesen Namen sehen." %>
+      <%= f.text_field :for_company, placeholder: "Firmenname", title: "Gib deinem BewerbungsClip einen Namen, damit du dich auch später noch gut auskennst. Nur du kannst diesen Namen sehen." %>
     </div>
 
-    <div class="span5 field">
+    <div class="span5 field margin-top-15">
       <%= f.file_field :video %>
     </div>
 
