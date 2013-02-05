@@ -18,14 +18,17 @@
         <h2>Übersicht</h2><br>
       </div>
 
-      <div class="span6">
+      <div class="span5 el1">
         <h4>BewerbungsClip für</h4>
       </div>
-      <div class="span2">
+      <div class="span2 el2">
         <h4>Kennwort</h4>
       </div>
-      <div class="span3 pull-left">
-        <h4>zuletzt besucht</h4>
+      <div class="span1 el3">
+        <h4>besucht</h4>
+      </div>
+      <div class="span2 el4">
+        <h4>zuletzt</h4>
       </div>
 
     <% else %>
@@ -36,17 +39,20 @@
 
         <% @user.templates.each do |template| %>
 
-          <div class="span6">
+          <div class="span5 el1">
             <h5><%= template.for_company %>
               <% if template.for_company.empty? %>Allgemeines Profil<% end %></h5>
           </div>
-          <div class="span2">
+          <div class="span2 el2">
             <h5><%= template.bosskey %></h5>
           </div>
-          <div class="span2 pull-left">
+          <div class="span1 el3">
+            <h5><%= ('0'..'9').to_a.shuffle.first(1).join %> mal</h5>
+          </div>
+          <div class="span2 el4">
             <h5><%= template.created_at.strftime("%d.%m. %Rh") %></h5>
           </div>
-          <div class="span3 special">
+          <div class="span3 special el5">
             <%= link_to 'anzeigen', template, class: "btn btn-small btn-primary size" %>
             <%= link_to 'löschen', template, class: "btn btn-small btn-danger size", method: :delete, data: { confirm: 'Willst du das Profil wirklich unwiderruflich löschen?' } %>
           </div>

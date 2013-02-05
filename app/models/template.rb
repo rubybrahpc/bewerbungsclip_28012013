@@ -31,7 +31,7 @@ class Template < ActiveRecord::Base
 
   before_save :create_remember_token
 
-  validates :for_company, length: { maximum: 55 }
+  validates :for_company, length: { maximum: 45 }
   validates :video, presence: true
 
   validates :password, presence: true, length: { minimum: 9 }
