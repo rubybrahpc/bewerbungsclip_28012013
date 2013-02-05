@@ -278,7 +278,7 @@ DIVS & LAYOUT
 .boss-box {
 	background: rgba(220,220,220,0.9);
 	border-radius: 6px;
-	padding: 35px 25px 0px 25px;
+	padding: 35px 0px 0px 45px;
 	border: 1px solid #AAAAAA;
 }
 
@@ -502,6 +502,10 @@ DIVS & LAYOUT
 	margin-top: -25px;
 }
 
+.kennwort-field {
+	width: 245px;
+}
+
 /*********************
 FORMS & ERROR EXPLANATION & BUTTONS
 *********************/
@@ -575,7 +579,7 @@ CHECKMARKS
 	li {
 	margin-bottom: 10px;	
 	padding-left: 35px;
-	padding-top: 2px;
+	padding-top: 0px;
 	font-size: 15px;
 	background-image: url(checkmark.png);
 	background-repeat: no-repeat;

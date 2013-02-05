@@ -23,7 +23,7 @@
     
       <div class="row ">
           <div class="span4 offset7 boss-box">
-            <p id="bosslogin">Geben Sie hier Ihr <br>Kennwort ein</p></br>
+            <p id="bosslogin">Geben Sie hier Ihr Kennwort ein</p></br>
           <%= form_for(:bession, url: bessions_path) do |f| %>
             <% flash.each do |key, value| %>
                 <div class="alert alert-<%= key %>">
@@ -31,7 +31,7 @@
                 </div>
               <% end %>
 
-            <%= f.text_field :bosskey, placeholder: "Kennwort", autofocus: true %>
+            <%= f.text_field :bosskey, placeholder: "Kennwort", autofocus: true, class: "kennwort-field" %>
 
             <%= f.submit "BewerbungsClip ansehen", class: "btn btn-large btn-success btn-form" %>
           <% end %>
