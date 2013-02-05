@@ -90,7 +90,7 @@ class TemplatesController < ApplicationController
       if signed_in?
       redirect_to(root_path) unless current_user.fingerprint == @template.fingerprint
       else
-        redirect_to(root_path) unless current_template.fingerprint == @template.fingerprint
+        redirect_to(root_path) unless current_template.id == @template.id
       end
     end
 
