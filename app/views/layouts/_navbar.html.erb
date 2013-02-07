@@ -18,7 +18,7 @@
         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= "#{current_user.vorname} #{current_user.nachname}"%> <b class="caret"></b>
         </a>
             <ul class="dropdown-menu">
-              <li><%= link_to "meine Profile", templates_path %></li>
+              <li><%= link_to "Profile", templates_path %></li>
               <li><%= link_to "Einstellungen", current_user %></li>
               <li><%= link_to "Konto freischalten", '#' %></li>
           <% if current_user.admin == true %>

@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
     user = User.find_by_email(params[:session][:email].downcase)
     if user && user.authenticate(params[:session][:password])
       sign_in user
-      redirect_back_or user
+      redirect_back_or templates_path
     else
       flash.now[:error] = 'Leider war die Emailadresse oder das Passwort falsch. Bitte probiere es erneut.'
       render 'new'
