@@ -52,7 +52,7 @@ class TemplatesController < ApplicationController
         format.html { redirect_to templates_path, notice: 'Dein Profil wurde erfolgreich erstellt und ist jetzt auf der Startseite mit dem Kennwort abrufbar.' }
         format.json { render json: @template, status: :created, location: @template }
       else
-        format.html { render action: "new" }
+        format.html { redirect_to templates_path, notice: 'Bitte lade immer ein Video hoch, wenn du ein neues Profil erstellst!' }
         format.json { render json: @template.errors, status: :unprocessable_entity }
       end
     end
