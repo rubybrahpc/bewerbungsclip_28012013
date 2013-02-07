@@ -46,15 +46,13 @@ class TemplatesController < ApplicationController
   # POST /templates.json
   def create
     @template = Template.new(params[:template])
-
-    respond_to do |format|
-      if @template.save
-        format.html { redirect_to templates_path, notice: 'Dein Profil wurde erfolgreich erstellt und ist jetzt auf der Startseite mit dem Kennwort abrufbar.' }
-        format.json { render json: @template, status: :created, location: @template }
-      else
-        format.html { redirect_to templates_path, notice: 'Bitte lade immer ein Video hoch, wenn du ein neues Profil erstellst!' }
-        format.json { render json: @template.errors, status: :unprocessable_entity }
-      end
+    
+    if @template.save
+      flash[:success] = 'Dein Profil wurde erfolgreich erstellt und ist jetzt auf der Startseite mit dem Kennwort abrufbar.'
+      redirect_to templates_path
+    else
+      flash[:error] = 'Bitte lade immer ein Video hoch, wenn du ein neues Profil erstellst!'
+      redirect_to templates_path
     end
   end
 
